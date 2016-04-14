@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    width: 480px;
+    margin: 0 auto;
+}
+
+main form {
+    width: 300px;
+    margin: 0 auto;
+}
+
+main form label {
+    display: inline-block;
+    width: 300px;
+}
+
+main form input {
+    float: right;
+    width: 180px;
+}
+
+table {
+    margin: 0 auto;
+}
+
+table thead tr th {
+    text-align: left;
+}
+
+table tr th, table tr td {
+    padding: 3px;
+}
+
+table.album {
+	border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 20px;
+}
+
+table.album tr:nth-child(2n) {
+	background-color: #EEEEEE;
+}
+
+table.album thead {
+	background-color: #DDDDDD;
+	border-bottom: 1px solid black;
+}
+
+table.album tfoot {
+	background-color: #DDDDDD;
+	border-top: 1px solid black;
+}
