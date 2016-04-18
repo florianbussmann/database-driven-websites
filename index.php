@@ -1,3 +1,16 @@
+<?php
+session_start();
+
+var_dump($_SESSION);
+
+if ($_REQUEST['username'] == 'florian' && $_REQUEST['password'] == '123456') {
+    echo 'Login successful!';
+    $_SESSION['logged_in'] = true;
+} else {
+    echo 'Login failed!';
+    $_SESSION['logged_in'] = false;
+}
+?>
 <!DOCTYPE HTML>
 <html>
     <head>
@@ -7,9 +20,11 @@
     </head>
     <body>
         <header>
-            <h1>Musikdatenbank - Login</h1>
+            <h1>Musikdatenbank</h1>
         </header>
         <main>
+            <?php
+            if ($_SESSION['logged_in'] !== true) { ?>
             <form>
                 <label>
                     Benutzername:
@@ -21,6 +36,7 @@
                 </label>
                 <button>Login</button>
             </form>
+            <?php } else { ?>
             <table class="album">
                 <thead>
                     <tr>
@@ -57,6 +73,7 @@
                     </tr>
                 </tfoot>
             </table>
+            <?php } ?>
         </main>
     </body>
 </html>
